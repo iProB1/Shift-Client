@@ -7,7 +7,6 @@
 #include "../imgui/imgui_impl_dx9.h"
 #include "../imgui/imgui_impl_win32.h"
 
-bool ShowMenu = false;
 bool ImGui_Initialised = false;
 
 namespace Process {
@@ -53,7 +52,7 @@ HRESULT APIENTRY MJEndScene(IDirect3DDevice9* pDevice) {
 	ImGui::GetIO().MouseDrawCursor = ShowMenu;
 	Tab::Another();
 	
-	ShowMenu = true; // auto opens if its false you need click INSERT for open or whatever key 
+	static bool ShowMenu = true; // auto opens if its false you need click INSERT for open or whatever key 
 	if (GetAsyncKeyState(VK_INSERT) & 1)  // key for open/close menu
 		ShowMenu = !ShowMenu;
 	
