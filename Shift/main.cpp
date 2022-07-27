@@ -10,7 +10,7 @@ void Tab::Main(){
 		{
 			if (ImGui::BeginTabItem("Cheats"))
 			{
-				ImGui::Text("its base of Shift client\nMade By Shift#0100 (old nick ProB1#0100 )");
+				ImGui::Text("its base of Shift client\nMade By ProB1#0100");
 				ImGui::EndTabItem();
 			}
 			ImGui::EndTabBar();
